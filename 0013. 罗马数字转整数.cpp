@@ -12,11 +12,11 @@ class Solution {
   int romanToInt(string s) {
     int result = 0;
     for (int i = 0; i < s.size(); i++) {
-      int currentValue = map[s[i]];
-      if (map[s[i + 1]] > currentValue) {
-        currentValue *= -1;
+      int current_value = map[s[i]];
+      if (map[s[i + 1]] > current_value) {
+        current_value *= -1;
       }
-      result += currentValue;
+      result += current_value;
     }
     return result;
   }
