@@ -6,9 +6,9 @@ class Solution {
   bool isValid(std::string s) {
     std::stack<char> leftParenthesis;
     for (char currentChar : s) {
-      if (currentChar == '(' || currentChar == '[' || currentChar == '{')
+      if (currentChar == '(' || currentChar == '[' || currentChar == '{') {
         leftParenthesis.push(currentChar);
-      else {
+      } else {
         if (leftParenthesis.empty()) {
           return false;
         }
