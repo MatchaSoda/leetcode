@@ -4,12 +4,12 @@ class Solution {
     if (input < 0) {
       return false;
     }
-    long long original_input = input;
-    long long reversed_input = 0;
-    while (input) {
-      reversed_input = reversed_input * 10 + input % 10;
+    long long originalInput = input;
+    long long reversedInput = 0;
+    while (input != 0) {
+      reversedInput = reversedInput * 10 + input % 10;
       input /= 10;
     }
-    return original_input == reversed_input;
+    return originalInput == reversedInput;
   }
 };

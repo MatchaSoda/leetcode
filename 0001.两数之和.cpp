@@ -1,16 +1,15 @@
 #include <unordered_map>
 #include <vector>
-using namespace std;
 
 class Solution {
  public:
-  vector<int> twoSum(vector<int>& nums, int target) {
-    unordered_map<int, int> map;  // value index
+  std::vector<int> twoSum(std::vector<int>& nums, int target) {
+    std::unordered_map<int, int> existedNumbers;  // value index
     for (int i = 0; i < nums.size(); i++) {
-      if (!map.count(nums[i])) {
-        map.insert({target - nums[i], i});
+      if (existedNumbers.count(target - nums[i]) == 0) {
+        existedNumbers.insert({nums[i], i});
       } else {
-        return {i, map[nums[i]]};
+        return {i, existedNumbers[target - nums[i]]};
       }
     }
     return {};
