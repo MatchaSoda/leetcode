@@ -1,4 +1,4 @@
-package leetcode0001
+package leetcode
 
 func twoSum(nums []int, target int) []int {
 	existedNumbers := map[int]int{} // value index
