@@ -4,8 +4,7 @@ var romanCharValues = map[byte]int{'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, '
 
 func romanToInt(s string) int {
 	result := 0
-	for charIndex := range s {
-		currentValue := romanCharValues[s[charIndex]]
+	for charIndex, currentValue := range s {
 		if charIndex < len(s)-1 && currentValue < romanCharValues[s[charIndex+1]] {
 			result -= currentValue
 		} else {
